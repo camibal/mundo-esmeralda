@@ -1,0 +1,95 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: url(../../assets/img/BGcompleto.jpg) fixed;
+	/* background-repeat: no-repeat; */
+	/* background-size: cover; */
+
+	/* background-attachment: fixed; */
+
+	/* font-family: helvetica, arial, sans-serif; */
+	/* line-height: 20px; */
+	/* height: 100%; */
+}
+
+.color-verde-oscuro {
+	color: #21633d !important;
+}
+
+.fondo-verde-oscuro {
+	background-color: #21633d !important;
+}
+
+.contenedor {
+	width: 100%;
+	/* max-width: 900px; */
+	margin: auto;
+}
+
+article {
+	background: rgba(24, 8, 33, 0.9);
+	padding: 20px;
+	margin: 20px 0;
+	color: #fff;
+	box-shadow: 0 5px 5px 3px rgba(0, 0, 0, 0.25);
+}
+
+article h2 {
+	color: #fff;
+}
+
+article hr {
+	background: #f64740;
+	height: 5px;
+	border: none;
+}
+
+article p {
+	line-height: 25px;
+}
+
+article h2,
+article p,
+article hr {
+	margin-bottom: 20px;
+}
+
+.img-fixed {
+	position: fixed;
+	top: -25%;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+}
+
+.img-fixed-2 {
+	position: fixed;
+	top: 24%;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+}
+
+.col-md-6 {
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+.row {
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+@media (max-width: 768px) {
+	.img-fixed {
+		top: -45%;
+	}
+
+	.img-fixed-2 {
+		top: 8%;
+		color: rgba(0, 0, 0, 0.576);
+	}
+}
