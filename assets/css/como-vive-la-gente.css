@@ -185,6 +185,11 @@ html {
     font-size: 3rem !important;
 }
 
+.img-navbar {
+	position: relative;
+	left: 49%;
+}
+
 @media (min-width: 1441px) {
     .owl-item {
         width: 330px !important;
@@ -280,6 +285,11 @@ html {
     }
     .img-video {
         height: auto;
+    }
+
+    .img-navbar {
+        position: relative;
+        left: 0%;
     }
 }
 

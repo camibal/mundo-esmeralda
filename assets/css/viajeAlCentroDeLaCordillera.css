@@ -1,0 +1,339 @@
+* {
+    font-family: "Tomorrow", sans-serif !important;
+}
+
+/* COLORS */
+
+.green-dark {
+    color: #21633d !important;
+}
+
+.bg-green-dark {
+    background-color: #21633d !important;
+}
+
+.green-medium {
+    color: #31d36e !important;
+}
+
+.bg-green-medium {
+    background-color: #31d36e !important;
+}
+
+.green-light {
+    color: #b2cf43 !important;
+}
+
+.bg-green-light {
+    background-color: #b2cf43 !important;
+}
+
+.bg-white {
+    background: #fff !important;
+}
+
+body {
+    font-family: "Tomorrow", sans-serif !important;
+}
+
+/* Style the tab */
+.tab {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    width: 30%;
+    height: auto;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+    border-bottom: solid 1px #99999958;
+    /* border-left: solid 1px #99999958; */
+    border-right: solid 1px #99999958;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+    z-index: 100;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    border-right: none;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+    /* background-color: #ccc; */
+}
+
+/* Style the tab content */
+.tabcontent {
+    float: left;
+    padding: 0px 12px;
+    border: 1px solid #ccc;
+    width: 70%;
+    border-left: none;
+    height: auto;
+}
+
+/*  */
+/* MENU ACORDEON */
+/*  */
+
+/*Vertical Steps*/
+.inside-body {
+    padding: 25px;
+}
+
+.list-group.vertical-steps .list-group-item {
+    border: none;
+    border-left: 3px solid #0052c2;
+    box-sizing: border-box;
+    border-radius: 0;
+    counter-increment: step-counter;
+    padding-left: 20px;
+    padding-right: 0px;
+    padding-bottom: 20px;
+    padding-top: 0px;
+}
+
+.list-group.vertical-steps .list-group-item.active {
+    background-color: transparent;
+    color: inherit;
+}
+
+.list-group.vertical-steps .list-group-item:last-child {
+    border-left: 3px solid transparent;
+    padding-bottom: 0;
+}
+
+.list-group.vertical-steps .list-group-item::before {
+    border-radius: 50%;
+    background-color: #0052c2;
+    color: #fff;
+    content: counter(step-counter);
+    display: inline-block;
+    float: left;
+    height: 25px;
+    line-height: 25px;
+    margin-left: -35px;
+    text-align: center;
+    width: 25px;
+}
+
+.list-group.vertical-steps .list-group-item span,
+.list-group.vertical-steps .list-group-item a {
+    display: block;
+    overflow: hidden;
+    padding-top: 2px;
+}
+
+/* End of Vertical Step */
+
+#how-to .panel-group .panel {
+    border-radius: 0px;
+    border: 0px;
+}
+
+#how-to .panel-group {
+    margin: 0px;
+}
+
+#how-to .panel-heading {
+    padding: 0px !important;
+    border-radius: 0px;
+}
+
+#how-to .parent a {
+    display: block;
+    text-decoration: none;
+    padding: 25px;
+}
+
+#how-to .child a {
+    display: block;
+    text-decoration: none;
+    padding: 25px;
+}
+
+#how-to .parent {
+    background-color: #fff !important;
+}
+
+#how-to .child {
+    background-color: #f2f2f2 !important;
+}
+
+#how-to .panel-body {
+    border: none;
+}
+
+#how-to .panel-body {
+    padding: 0px;
+}
+
+#how-to .panel-group .panel + .panel {
+    margin: 0px;
+}
+
+#how-to .panel-group .parent {
+    border-bottom: 1px solid #ecf0f1;
+}
+
+#how-to .panel-group .child {
+    border-bottom: 1px solid #fdfdfd;
+}
+
+#superaccordion {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important;
+}
+
+.panel-heading a:after {
+    content: "";
+    position: relative;
+    top: 1px;
+    right: 10px;
+    display: inline-block;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14pt;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    float: right;
+    transition: transform 0.25s linear;
+    -webkit-transition: -webkit-transform 0.25s linear;
+    color: #333;
+}
+
+.panel-heading a[aria-expanded="true"]:after {
+    content: "\2212";
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.panel-heading a[aria-expanded="false"]:after {
+    content: "\002b";
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.parent a:after {
+    content: "";
+    position: relative;
+    top: 14px;
+    right: 10px;
+    display: inline-block;
+    line-height: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    float: right;
+    transition: transform 0.25s linear;
+    -webkit-transition: -webkit-transform 0.25s linear;
+    color: #333;
+    font-size: 1.5rem;
+}
+
+div.mapa_imagen {
+    position: relative;
+}
+
+ul.notas li {
+    list-style: none;
+    display: none;
+    position: absolute;
+    border: medium solid white;
+    background: url("esta_imagen_no_existe");
+}
+
+div.mapa_imagen:hover ul.notas li {
+    display: block;
+}
+
+ul.notas li p {
+    margin: 10px 0 0 0;
+    padding: 0.3em;
+    display: none;
+    background: #fff;
+    opacity: 0.65;
+    position: absolute;
+    top: -5.5rem;
+    width: 6rem;
+}
+
+ul.notas li:hover p {
+    display: block;
+}
+
+ul.notas li#nota1 {
+    width: 17px;
+    height: 17px;
+    top: 27%;
+    left: 19%;
+    border-radius: 50%;
+}
+
+ul.notas li#nota2 {
+    width: 17px;
+    height: 17px;
+    top: 44%;
+    left: 32%;
+    border-radius: 50%;
+}
+
+ul.notas li#nota3 {
+    width: 17px;
+    height: 17px;
+    top: 47%;
+    left: 44%;
+    border-radius: 50%;
+}
+
+ul.notas li#nota4 {
+    width: 17px;
+    height: 17px;
+    top: 45%;
+    left: 52%;
+    border-radius: 50%;
+}
+
+ul.notas li#nota5 {
+    width: 17px;
+    height: 17px;
+    top: 38%;
+    left: 53%;
+    border-radius: 50%;
+}
+
+.btn-section1 {
+    background: linear-gradient(90deg, #31d36e, #b2cf43);
+    color: #fff;
+}
+
+.btn-section2 {
+    background: linear-gradient(90deg, #fff, #fff);
+    /* border: solid 1px #999999; */
+    box-shadow: 0px 2px 2px #9999998a;
+}
+
+.img-navbar {
+    position: relative;
+    left: 49%;
+}
+
+@media (max-width: 768px) {
+    .img-navbar {
+        left: 0%;
+    }
+}

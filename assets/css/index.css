@@ -83,6 +83,11 @@ article hr {
 	margin: 0 !important;
 }
 
+.img-navbar {
+	position: relative;
+	left: 49%;
+}
+
 @media (max-width: 768px) {
 	.img-fixed {
 		top: -45%;
@@ -91,5 +96,9 @@ article hr {
 	.img-fixed-2 {
 		top: 8%;
 		color: rgba(0, 0, 0, 0.576);
+	}
+
+	.img-navbar {
+		left: 0%;
 	}
 }

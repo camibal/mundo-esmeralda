@@ -1,13 +1,25 @@
-<!doctype html>
-<html class="no-js" lang="en">
+<?php
+ob_start();
+include("admin/inc/config.php");
+include("admin/inc/functions.php");
+$i = 0;
+$statement = $pdo->prepare("SELECT * FROM tbl_favicon");
+$statement->execute();
+$result = $statement->fetchAll(PDO::FETCH_ASSOC);
+foreach ($result as $row) {
+	$favicon = $row['favicon'];
+}
+?>
 
-<!-- Mirrored from www.justinaguilar.com/animations/scrolling.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 03 Mar 2021 23:47:26 GMT -->
+<!DOCTYPE html>
+<html class="no-js" lang="en">
 
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Mundo Esmeralda</title>
+	<link rel="icon" type="image/png" href="./admin/img/<?php echo $favicon ?>">
 	<link rel="stylesheet" href="./assets/css/index.css">
 	<link rel="stylesheet" href="./assets/css/reset.css">
 	<link rel="stylesheet" href="./assets/css/style.css">
@@ -20,41 +32,7 @@
 
 <body>
 	<!-- NAVBAR -->
-	<!-- <header class="">
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<a class="navbar-brand text-decoration-none" href="#">Logo</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
 
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav mr-auto">
-					<li class="nav-item active">
-						<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Link</a>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							Dropdown
-						</a>
-						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="#">Action</a>
-							<a class="dropdown-item" href="#">Another action</a>
-							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="#">Something else here</a>
-						</div>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link disabled" href="#">Disabled</a>
-					</li>
-				</ul>
-			</div>
-		</nav>
-	</header> -->
 
 
 	<!-- CONTENT -->
@@ -216,7 +194,10 @@
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120439702-2"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
 		gtag('js', new Date());
 
 		gtag('config', 'UA-120439702-2');
@@ -228,9 +209,9 @@
 	<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
 	<script src="./assets/js/jquery-latest.js"></script>
 	<script>
-		$(document).ready(function () {
+		$(document).ready(function() {
 
-			$(window).scroll(function () {
+			$(window).scroll(function() {
 				var barra = $(window).scrollTop();
 				var posicion = barra * 0.10;
 
@@ -242,9 +223,8 @@
 		});
 	</script>
 	<script>
-
-		$(window).scroll(function () {
-			$('#phone').each(function () {
+		$(window).scroll(function() {
+			$('#phone').each(function() {
 				var imagePos = $(this).offset().top;
 
 				var topOfWindow = $(window).scrollTop();
@@ -253,7 +233,7 @@
 				}
 			});
 
-			$('#pin').each(function () {
+			$('#pin').each(function() {
 				var imagePos = $(this).offset().top;
 
 				var topOfWindow = $(window).scrollTop();
@@ -262,7 +242,7 @@
 				}
 			});
 
-			$('#pop-up-message').each(function () {
+			$('#pop-up-message').each(function() {
 				var imagePos = $(this).offset().top;
 
 				var topOfWindow = $(window).scrollTop();
@@ -271,7 +251,7 @@
 				}
 			});
 
-			$('#pin2').each(function () {
+			$('#pin2').each(function() {
 				var imagePos = $(this).offset().top;
 
 				var topOfWindow = $(window).scrollTop();
@@ -280,7 +260,7 @@
 				}
 			});
 
-			$('#example-4').each(function () {
+			$('#example-4').each(function() {
 				var imagePos = $(this).offset().top;
 
 				var topOfWindow = $(window).scrollTop();
@@ -289,7 +269,7 @@
 				}
 			});
 
-			$('#example-5').each(function () {
+			$('#example-5').each(function() {
 				var imagePos = $(this).offset().top;
 
 				var topOfWindow = $(window).scrollTop();
@@ -300,7 +280,6 @@
 
 
 		});
-
 	</script>
 </body>
 

@@ -12,11 +12,11 @@ foreach ($result as $row) {
 ?>
 <!-- NAVBAR -->
 <nav class="navbar navbar-light bg-white" style="border-bottom: 2px solid #99999920;">
-    <a class="navbar-brand text-decoration-none" href="#" class="position-img-navbar">
+    <a class="navbar-brand text-decoration-none img-navbar" href="#">
         <img src="admin/img/<?php echo $logo ?>" width="70px" class="d-inline-block align-top" alt="">
     </a>
-    <button class="navbar-toggler m-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler m-0 green-medium" style="border: none;" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon green-medium"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">

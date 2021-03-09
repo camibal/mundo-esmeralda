@@ -8,17 +8,17 @@ if (isset($_POST['form1'])) {
         $valid = 0;
         $error_message .= "El campo  nombre debe estar lleno<br>";
     }
-    if (empty($_POST['hour'])) {
+    if (!is_numeric($_POST['hour']) || empty($_POST['hour'])) {
         $valid = 0;
-        $error_message .= "El campo hooras de duración del video debe estar lleno<br>";
+        $error_message .= "El campo horas de duración del video debe estar lleno y debe ser numérico<br>";
     }
-    if (empty($_POST['min'])) {
+    if (!is_numeric($_POST['min']) || empty($_POST['min'])) {
         $valid = 0;
-        $error_message .= "El campo minutos de duración del video debe estar lleno<br>";
+        $error_message .= "El campo minutos de duración del video debe estar lleno y debe ser numérico<br>";
     }
-    if (empty($_POST['second'])) {
+    if (!is_numeric($_POST['second']) || empty($_POST['second'])) {
         $valid = 0;
-        $error_message .= "El campo segundos de duración del video debe estar lleno<br>";
+        $error_message .= "El campo segundos de duración del video debe estar lleno y debe ser numérico<br>";
     }
     if (empty($_POST['url'])) {
         $valid = 0;
@@ -122,7 +122,7 @@ if (isset($_POST['form1'])) {
                         <div class="form-group">
                             <label for="" class="col-sm-3 control-label">Nombre video <span>*</span></label>
                             <div class="col-sm-4">
-                                <input type="text" name="name" class="form-control">
+                                <input type="text" name="name" maxlength="55" class="form-control">
                             </div>
                         </div>
                         <div class="form-group">
@@ -134,19 +134,19 @@ if (isset($_POST['form1'])) {
                         <div class="form-group">
                             <label for="" class="col-sm-3 control-label">Horas de duración <span>*</span></label>
                             <div class="col-sm-4">
-                                <input type="number" name="hour" maxlength="2" class="form-control">
+                                <input type="text" name="hour" maxlength="2" class="form-control">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="" class="col-sm-3 control-label">Minutos de duración <span>*</span></label>
                             <div class="col-sm-4">
-                                <input type="number" name="min" maxlength="2" class="form-control">
+                                <input type="text" name="min" maxlength="2" class="form-control">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="" class="col-sm-3 control-label">Segundos de duración <span>*</span></label>
                             <div class="col-sm-4">
-                                <input type="number" name="second" maxlength="2" class="form-control">
+                                <input type="text" name="second" maxlength="2" class="form-control">
                             </div>
                         </div>
                         <div class="form-group">
